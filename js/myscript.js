@@ -17,12 +17,20 @@ var random = cpuRandom(1,5)
 console.log("Il punteggio della cpu é " + random);
 var totalScore = totalUserNumber + random;
 
-if ( totalScore % 2 == 0) {
-  console.log( totalUserNumber + random + " = Pari!");
+
+function evenOddgame(num1, num2, sum) {
+
+  if ( sum % 2 == 0) {
+    console.log( num1 + num2 + " = Pari!");
+    return "pari";
+  }
+  else{
+    console.log(num1 + num2 + " = Dispari!");
+    return "dispari";
+  }
 }
-else{
-  console.log(totalUserNumber + random + " = Dispari!");
-}
+
+var evenOddGameresult = evenOddgame(totalUserNumber, random, totalScore);
 
 if (evenOdd == "pari" && totalScore % 2 == 0 ){
 alert("Hai vinto!");
